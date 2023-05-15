@@ -13,9 +13,11 @@
     <div class="row">
         <div class="span4"></div>
         <div class="span4">
-
-<h1>FLASK APP RUNNING</h1>
-<h2>Please enter your flower measurements below:</h2>
+</br>
+<h1>AQI Prediction Engine</h1>
+</br>
+<h2>Please enter date and location for the prediction below:</h2>
+</br>
 <form method="POST">
     {# This is hidden_tag is a CSRF security feature. #}
     {{ form.hidden_tag() }}
@@ -25,23 +27,13 @@
         <th>Value</th>
     </tr>
         <tr>
-            <td> {{ form.SepalLengthCm.label }}</td>
-            <td> {{ form.SepalLengthCm }}</td>
+            <td> {{ form.PredictionDate.label }}</td>
+            <td> {{ form.PredictionDate }}</td>
         </tr>
-
-    <tr>
-        <td>{{ form.SepalWidthCm.label }}</td>
-        <td> {{ form.SepalWidthCm }}</td>
-    </tr>
-
-    <tr>
-        <td>{{ form.PetalLengthCm.label }}</td>
-        <td>{{ form.PetalLengthCm }}</td>
-    </tr>
-
-    <tr>
-        <td>{{ form.PetalWidthCm.label }}</td>
-        <td>{{ form.PetalWidthCm }}</td>
+        <tr>
+            <td> {{ form.PredictionCity.label }}</td>
+            <td> {{ form.PredictionCity }}</td>
+        </tr>
     </tr>
     </table>
     {{ form.submit() }}
