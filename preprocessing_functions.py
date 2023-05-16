@@ -23,6 +23,12 @@ def db_drop_table(dbname, tablename):
     cursor.execute("DROP Table " + tablename)
     conn.commit
 
+# Funktion zur Umwandlung des Timestams in ein Datum
+def format_timestamp(date_str):
+    parts = date_str[:10]
+    parts = parts.split('-')
+    return f"{parts[2]}.{parts[1]}.{parts[0][-2:]}"
+
 # Funktion zur Umwandlung des Datums
 def format_date(date_str):
     parts = date_str.split('-')
