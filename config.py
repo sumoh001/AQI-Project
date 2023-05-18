@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 ## CSV-Dateien mit den Daten
 csv_file = 'ausgabe.csv'
 csv_export = 'AQI-export.csv'
-
+csv_weatherhistory = 'csv-files/Weather_history.csv'
 
 # DB Zeug
 ## Name der DB
@@ -16,6 +16,7 @@ db_name = 'postgres'
 ## Name der tables
 db_table = 'Test_table'
 db_weather = 'weather_table'
+db_weather_history = 'weather_history_table'
 db_AQI_history = 'aqi_history_table'
 db_AQI_RAW = 'aqi_newtable'
 
